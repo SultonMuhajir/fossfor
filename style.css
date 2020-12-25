@@ -31,7 +31,7 @@ nav {
    transition: .2s;
 }
 
-.brand a {
+nav .brand a {
    color: #eee;
    text-transform: uppercase;
    letter-spacing: 2px;
@@ -40,33 +40,33 @@ nav {
    font-family: 'Montserrat', sans-serif;
 }
 
-ul {
+nav ul {
    display: flex;
    justify-content: space-around;
    width: 25%;
 }
 
-ul li {
+nav li {
    list-style: none;
 }
 
-ul a {
+nav li a {
    color: #eee;
    text-decoration: none;
 }
 
-.menu {
+nav .menu {
    display: none;
    cursor: pointer;
    user-select: none;
 }
 
-.menu div {
+nav span {
+   display: block;
    width: 25px;
    height: 3px;
-   border-radius: 10px;
+   margin: 4px;
    background-color: #eee;
-   margin: 5px;
    transition: .3s;
 }
 
@@ -98,15 +98,11 @@ ul a {
    z-index: 2;
    color: white;
    text-align: center;
-   transform: translateY(100px);
-   opacity: 0;
-   transition: linear .6s;
 }
 
 .Header h1 {
    font-size: 3.5rem;
-   padding-top: 22vmin;
-   transform: translateY(-100px);
+   padding-top: 23vmin;
 }
 
 
@@ -193,7 +189,6 @@ ul a {
    border-radius: 5px;
    overflow: hidden;
    text-align: center;
-   cursor: pointer;
 }
 
 .Struktur figure {
@@ -246,7 +241,7 @@ footer p {
 
 @media (max-width: 990px) {
 
-   ul {
+   nav ul {
       width: 35%;
    }
 
@@ -282,7 +277,7 @@ footer p {
       overflow-x: hidden;
    }
 
-   ul {
+   nav ul {
       position: absolute;
       right: 0;
       top: 50px;
@@ -299,18 +294,18 @@ footer p {
       border-radius: 15px 0 0 0;
    }
 
-   ul li {
+   nav li {
       padding: 5% 0;
       opacity: 0;
       transform: translate(70px, 0);
       transition: .5s;
    }
 
-   ul a {
+   nav li a {
       color: black;
    }
 
-   .menu {
+   nav .menu {
       display: block;
    }
 }
@@ -330,23 +325,23 @@ footer p {
 
 
 /* => Action */
-.ulAction {
+nav .ulAction {
    transform: translateX(0%);
 }
 
-ul .liAction {
+nav .liAction {
    opacity: 1;
    transform: translate(0, 0);
 }
 
-.toggle div:nth-child(1) {
-   transform: rotate(-45deg) translate(-5px, 6px);
+nav .toggle span:nth-child(1) {
+   transform: rotate(-45deg) translate(-5px, 5px);
 }
 
-.toggle div:nth-child(2) {
+nav .toggle span:nth-child(2) {
    opacity: 0;
 }
 
-.toggle div:nth-child(3) {
-   transform: rotate(45deg) translate(-5px, -6px);
+nav .toggle span:nth-child(3) {
+   transform: rotate(45deg) translate(-5px, -5px);
 }

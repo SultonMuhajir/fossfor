@@ -1,41 +1,36 @@
-// => Window on Load
-$(window).on("load", function () {
-   $(".Header h1, .Header p").css({
-      "transform": "translateY(0)",
-      "opacity": "1"
-   })
-});
-
-
 // => Window on Scroll
 $(window).on("scroll", function () {
    if ($(this).scrollTop() >= 2) {
-      $("nav").css("backgroundColor", "#eee");
-      $(".brand a, ul a").css("color", "black");
-      $("nav").css("boxShadow", "0 1px 10px rgba(0,0,0,.3)");
-      $(".menu div").css("backgroundColor", "black");
-      $("ul").css("borderRadius", "0");
+      $("nav").css({
+         "backgroundColor": "#eee",
+         "boxShadow": "0 1px 10px rgba(0,0,0,.3)"
+      })
+      $("nav a").css("color", "black");
+      $("nav ul").css("borderRadius", "0");
+      $("nav span").css("backgroundColor", "black");
    } else {
-      $("nav").css("backgroundColor", "");
-      $(".brand a, ul a").css("color", "");
-      $("nav").css("boxShadow", "");
-      $(".menu div").css("backgroundColor", "");
-      $("ul").css("borderRadius", "15px 0 0 0");
+      $("nav").css({
+         "backgroundColor": "",
+         "boxShadow": ""
+      })
+      $("nav a").css("color", "");
+      $("nav ul").css("borderRadius", "15px 0 0 0");
+      $("nav span").css("backgroundColor", "");
    }
 });
 
 
 // => Link on Click
-$("ul a").on("click", function (e) {
-   $("ul").removeClass("ulAction");
-   $(".menu").removeClass("toggle");
-   $("ul li").each(function (i) {
+$("nav li a").on("click", function (e) {
+   $("nav ul").removeClass("ulAction");
+   $("nav .menu").removeClass("toggle");
+   $("nav li").each(function (i) {
       setTimeout(function () {
-         $("ul li").eq(i).removeClass("liAction");
-      }, 200 * (i + 1));
+         $("nav li").eq(i).removeClass("liAction");
+      }, 150 * (i + 1));
    });
 
-   var tujuan = $(this).attr("href");
+   const tujuan = $(this).attr("href");
    const yOffset = -40;
    const element = $(tujuan)[0];
    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -48,13 +43,12 @@ $("ul a").on("click", function (e) {
 
 
 //  => Menu on Click
-$(".menu").on("click", function () {
+$("nav .menu").on("click", function () {
    $(this).toggleClass("toggle");
-   $("ul").toggleClass("ulAction");
-
-   $("ul li").each(function (i) {
+   $("nav ul").toggleClass("ulAction");
+   $("nav li").each(function (i) {
       setTimeout(function () {
-         $("ul li").eq(i).toggleClass("liAction");
-      }, 200 * (i + 1));
+         $("nav li").eq(i).toggleClass("liAction");
+      }, 150 * (i + 1));
    });
 });
