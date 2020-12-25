@@ -1,3 +1,12 @@
+// => Window on Load
+$(window).on("load", function () {
+   $(".Header h1, .Header p").css({
+      "transform": "translateY(0)",
+      "opacity": "1"
+   })
+});
+
+
 // => Window on Scroll
 $(window).on("scroll", function () {
    if ($(this).scrollTop() >= 2) {

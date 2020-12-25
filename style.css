@@ -98,11 +98,15 @@ ul a {
    z-index: 2;
    color: white;
    text-align: center;
+   transform: translateY(100px);
+   opacity: 0;
+   transition: linear .6s;
 }
 
 .Header h1 {
    font-size: 3.5rem;
    padding-top: 22vmin;
+   transform: translateY(-100px);
 }
 
 
@@ -169,7 +173,7 @@ ul a {
 }
 
 .Struktur hr {
-   border-top: 2px solid #aaa;
+   border-top: 3px solid #aaa;
    width: 230px;
    margin: 0 auto 30px
 }
@@ -247,7 +251,7 @@ footer p {
    }
 
    .Header {
-      background-position: center -300px;
+      background-position: center -270px;
    }
 
    .Profil .container {
