@@ -17,6 +17,10 @@ h3 {
    font-family: 'Montserrat', sans-serif;
 }
 
+section {
+   padding: 60px 0;
+}
+
 
 
 /* => Navbar */
@@ -78,8 +82,10 @@ nav span {
    width: 100%;
    height: 70vmin;
    background-image: url(img/bg.png);
-   background-position: center -200px;
+   background-position: center -150px;
    background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .Header::after {
@@ -102,7 +108,7 @@ nav span {
 
 .Header h1 {
    font-size: 3.5rem;
-   padding-top: 23vmin;
+   padding-top: 15vmin;
 }
 
 
@@ -111,10 +117,10 @@ nav span {
 .Profil .container {
    display: grid;
    margin: auto;
-   padding: 50px 0 60px;
    width: 70vw;
    grid-template-columns: .6fr 1fr;
    gap: 50px;
+   padding-top: 10px;
 }
 
 .Profil img {
@@ -128,7 +134,7 @@ nav span {
 }
 
 .Profil hr {
-   border-top: 3px solid #aaa;
+   border-top: 3px solid #888;
    width: 75px;
    margin: 2px 0 15px;
 }
@@ -141,18 +147,19 @@ nav span {
    padding: 10px 30px;
    margin-top: 20px;
    cursor: pointer;
-   background-color: black;
+   background-color: #222;
    color: white;
-   border: none;
+   border: 1.5px solid #222;
    outline: none;
    border-radius: 5px;
+   display: inline-block;
 }
 
 .Profil button:hover {
    background-color: #eee;
-   color: black;
-   border: 1.5px solid;
+   color: #222;
    font-weight: bold;
+   transition: .15s;
 }
 
 
@@ -165,11 +172,10 @@ nav span {
 .Struktur h2 {
    text-align: center;
    font-size: 1.8rem;
-   padding: 20px 0 5px;
 }
 
 .Struktur hr {
-   border-top: 3px solid #aaa;
+   border-top: 3px solid #888;
    width: 230px;
    margin: 0 auto 30px
 }
@@ -220,7 +226,7 @@ nav span {
 
 /* => Footer */
 footer {
-   background-color: #333333;
+   background-color: #222;
    color: white;
 }
 
@@ -282,7 +288,7 @@ footer p {
       right: 0;
       top: 50px;
       height: calc(100vh - 50px);
-      background-color: #eee;
+      background-color: #222;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -295,18 +301,23 @@ footer p {
    }
 
    nav li {
-      padding: 5% 0;
+      padding: 7% 0;
       opacity: 0;
       transform: translate(70px, 0);
       transition: .5s;
    }
 
    nav li a {
-      color: black;
+      font-size: 1.15rem;
+
    }
 
    nav .menu {
       display: block;
+   }
+
+   .Header h1 {
+      padding-top: 10vmin;
    }
 }
 
