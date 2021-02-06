@@ -85,7 +85,6 @@ nav span {
    background-position: center -150px;
    background-attachment: fixed;
    background-repeat: no-repeat;
-   background-size: cover;
 }
 
 .Header::after {
