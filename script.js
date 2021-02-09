@@ -1,7 +1,7 @@
 // => Window on Scroll
 $(window).on("scroll", function () {
    if ($(this).scrollTop() >= 2) {
-      $("nav").css("backgroundColor", "#222");
+      $("nav").css("backgroundColor", "#1e2022");
       $("nav ul").css("borderRadius", "0");
    } else {
       $("nav").css("backgroundColor", "initial");
