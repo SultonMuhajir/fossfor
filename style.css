@@ -257,7 +257,7 @@ footer p {
 
 /* => Media Query */
 @media (max-width: 1156px) {
-   .Struktur .hidden {
+   .Struktur .content-hide {
       display: none;
    }
 }

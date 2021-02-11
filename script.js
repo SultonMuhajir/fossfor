@@ -1,3 +1,9 @@
+AOS.init({
+   once: true,
+   duration: 1200
+});
+
+
 // => Window on Scroll
 $(window).on("scroll", function () {
    if ($(this).scrollTop() >= 2) {
