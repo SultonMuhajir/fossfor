@@ -38,3 +38,12 @@ $("nav .menu").on("click", function () {
       }, 150 * (i + 1));
    });
 });
+
+// => Sweet Alert
+document.querySelector(".Profil button").addEventListener("click", function () {
+   Swal.fire(
+      'Under Construction',
+      '',
+      'info'
+   )
+});

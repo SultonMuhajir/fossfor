@@ -149,6 +149,7 @@ nav span {
 }
 
 .Profil hr {
+   border-top: 2px solid var(--c3);
    border-bottom: 2px solid var(--c3);
    width: 75px;
    margin: 3px 0 15px;
@@ -192,6 +193,7 @@ nav span {
 }
 
 .Struktur hr {
+   border-top: 2px solid var(--c3);
    border-bottom: 2px solid var(--c3);
    width: 230px;
    margin: 3px auto 30px
