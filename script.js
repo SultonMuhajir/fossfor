@@ -1,4 +1,4 @@
-// => Window on Scroll
+// Window on Scroll
 $(window).on("scroll", function () {
    if ($(this).scrollTop() >= 2) {
       $("nav").css("backgroundColor", "#1e2022");
@@ -10,7 +10,7 @@ $(window).on("scroll", function () {
 });
 
 
-// => Link on Click
+// Link on Click
 $("nav li a").on("click", function (e) {
    $("nav ul").removeClass("ulAction");
    $("nav .menu").removeClass("toggle");
@@ -22,7 +22,7 @@ $("nav li a").on("click", function (e) {
 });
 
 
-//  => Menu on Click
+//  Menu on Click
 $("nav .menu").on("click", function () {
    $(this).toggleClass("toggle");
    $("nav ul").toggleClass("ulAction");
@@ -34,14 +34,14 @@ $("nav .menu").on("click", function () {
 });
 
 
-// => Animate on Scroll
+// Animate on Scroll
 AOS.init({
    once: true,
    duration: 1200
 });
 
 
-// => Sweet Alert
+// Sweet Alert
 document.querySelector(".Profil button").addEventListener("click", function () {
    Swal.fire(
       'Under Construction',
