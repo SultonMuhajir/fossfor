@@ -1,9 +1,3 @@
-AOS.init({
-   once: true,
-   duration: 1200
-});
-
-
 // => Window on Scroll
 $(window).on("scroll", function () {
    if ($(this).scrollTop() >= 2) {
@@ -38,6 +32,14 @@ $("nav .menu").on("click", function () {
       }, 150 * (i + 1));
    });
 });
+
+
+// => Animate on Scroll
+AOS.init({
+   once: true,
+   duration: 1200
+});
+
 
 // => Sweet Alert
 document.querySelector(".Profil button").addEventListener("click", function () {
